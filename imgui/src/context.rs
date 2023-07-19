@@ -48,7 +48,7 @@ use crate::{MouseCursor, Ui};
 
 #[derive(Debug)]
 pub struct Context {
-    raw: *mut sys::ImGuiContext,
+    pub raw: *mut sys::ImGuiContext,
     shared_font_atlas: Option<SharedFontAtlas>,
     ini_filename: Option<CString>,
     log_filename: Option<CString>,
@@ -67,7 +67,7 @@ pub struct Context {
     #[cfg(feature = "docking")]
     renderer_viewport_ctx: Box<UnsafeCell<crate::RendererViewportContext>>,
 
-    ui: Ui,
+    pub ui: Ui,
 }
 
 // This mutex needs to be used to guard all public functions that can affect the underlying

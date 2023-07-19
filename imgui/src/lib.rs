@@ -130,7 +130,7 @@ impl Context {
 #[derive(Debug)]
 pub struct Ui {
     /// our scratch sheet
-    buffer: cell::UnsafeCell<string::UiBuffer>,
+    pub buffer: cell::UnsafeCell<string::UiBuffer>,
 }
 
 impl Ui {
